@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eae6e2;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.opt-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+.opt-container input {
+  margin-right: 0 !important;
+  flex: 1;
+  padding-top: 5px;
+  outline: none;
+}
+
+.abhishek {
+  background-color: #6EE7B7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.abhishek2 {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 4px;
+}
+.abhishek3 {
+  text-align: center;
+  line-height: normal;
+  color: white;
+  font-weight: medium;
+  font-size: 43xl;
+  margin-bottom: 6px;
+}
+.abhishek4 {
+  background-color: white;
+  color: #38a169;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 9999px;
+}
+.abhishek5 {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.abhishek6 {
+  background-color: #56514d;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  color: #fff;
+  border-radius: 0.3125rem;
+}
+.abhishek7 {
+  margin-top: 0rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.abhishek8 {
+  text-align: center;
+  color: white;
+  font-weight: 505;
+  font-size: 1.5rem;
+}
+.react-tel-input .form-control {
+  width: 100%;
+  padding: 6px;
+  font-size: 16px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+.navbarmiddle {
+  font-size: xx-large;
+  font-weight: bold;
+}
+.upcoming {
+  font-weight: medium;
+  margin-left: 100px;
+font-size:x-large;
+display: flex;
+  align-items: center;
+}
+.dateAndTitle {
+  display: flex;
+  align-items: center;
+  /* margin-top: 20px; */
+  margin-left: 130px;
+  margin-right: 2px;
+  
+}
+
+.date {
+  margin-right: 15px;
+  align-items:center;
+
+}
+
+.container {
+  position:relative;
+  width: 2000px;
+  height: 65px; 
+  border: 1px solid #ccc;
+  border-radius: 20px;
+background-color: white;
+margin-left: 12px;
+}
+.container2 {
+  position:relative;
+  width: 2000px;
+  height: 65px; 
+  border: 1px solid #ccc;
+  border-radius: 20px;
+background-color: white;
+margin-left: 12px;
+margin-top: 10px;
+}
+
+.title, .number, .time {
+  position: absolute;
+  padding: 10px;
+}
+
+.title {
+  top: 0;
+  left: 0;
+}
+
+.number {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.time {
+  bottom: 0;
+  left: 0;
+  font-size: small;
+}
+.taskcontainer{
+  background-color: #eae6e2;
+}
+.bottomRightDiv {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 999; 
+}
+
+.floating-button button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 200px;
+  cursor: pointer;
+
+}
+/* YourStyles.css */
+
+/* YourStyles.css */
+
+.createcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.separator {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.date-box {
+  display: flex;
+  align-items: center;
+}
+
+.note-input input {
+  width: 300px;
+  height: 10px;
+  padding: 10px;
+}
+.exitandcreate {
+  display: flex;
+  justify-content:space-around;
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
