@@ -1,0 +1,102 @@
+.home {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+}
+
+.navbarmiddle {
+    font-size: 1.5em;
+}
+
+.taskcontainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.dateAndTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.date {
+    font-size: 1.2em;
+    color: #17a2b8;
+    margin-right: 20px;
+}
+
+.container, .container2 {
+    flex-grow: 1;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.number, .time {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.floating-button button {
+    background-color: #28a745;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.logout-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #363cf4; /* Red color for logout to indicate action */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f; /* Darken the color on hover */
+  }
+  
+  /* Optional: add some space between the icons and the logout button */
+  .navbar > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+

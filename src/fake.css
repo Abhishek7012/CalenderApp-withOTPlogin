@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #eae6e2;
+  
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  .opt-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+  }
+  .opt-container input {
+    margin-right: 0 !important;
+    flex: 1;
+    padding-top: 5px;
+    outline: none;
+  }
+  
+  .abhishek {
+    background-color: #6EE7B7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .abhishek2 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 8px;
+    padding: 4px;
+  }
+  .abhishek3 {
+    text-align: center;
+    line-height: normal;
+    color: white;
+    font-weight: medium;
+    font-size: 43xl;
+    margin-bottom: 6px;
+  }
+  .abhishek4 {
+    background-color: white;
+    color: #38a169;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-radius: 9999px;
+  }
+  .phonelabel {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+  }
+  .signupbutton {
+    background-color: #61d261;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem;
+    color: #fff;
+    border-radius: 0.3125rem;
+  }
+  .spinner {
+    margin-top: 0rem;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .abhishek8 {
+    text-align: center;
+    color: white;
+    font-weight: 505;
+    font-size: 1.5rem;
+  }
+  .react-tel-input .form-control {
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+  }
+  
+  
+  
+  .bottomRightDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  
+  .createcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  .separator {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  .date-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .note-input input {
+    width: 300px;
+    height: 10px;
+    padding: 10px;
+  }
+  .exitandcreate {
+    display: flex;
+    justify-content:space-around;
+    padding: 5px;
+    background-color: #f2f2f2;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

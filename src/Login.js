@@ -7,6 +7,10 @@ import "react-phone-input-2/lib/style.css";
 import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 import { auth } from './firebase.config'
 import { toast, Toaster } from "react-hot-toast";
+import { useNavigate } from 'react-router-dom';
+import { Navbar, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -15,6 +19,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   function onCaptchVerify() {
     if (!window.recaptchaVerifier) {
@@ -57,6 +62,9 @@ const Login = () => {
         console.log(res);
         setUser(res.user)
         setLoading(false)
+        setTimeout(() => {
+          navigate('/home'); // Redirect to home page after 2 seconds
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
@@ -65,29 +73,37 @@ const Login = () => {
   }
 
   return (
-    
-    <section className="abhishek">
+    <>
+    <Navbar bg="light" expand="lg">
+      <Navbar.Brand as={Link} to="/home">
+        <Button variant="outline-primary">Home</Button>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+      </Navbar.Collapse>
+    </Navbar>
+    <section className="loginpage">
       <div>
         <Toaster toastOptions={{ duration: 4000 }} />
         <div id="recaptcha-container"></div>
         {
           user ? (
-            <h2 className='abhishek8'>
+            <h2 className='sucesslogo'>
               👍Login Success
             </h2>
           ) : (
-            <div className='abhishek2'>
+            <div className='loginbox'>
 
-              <h1 className='abhishek3'>
+              <h1 className='welcometext'>
                 Welcome to  < br />  Login Page
               </h1>
               {
                 showOTP ? (
                   <>
-                    <div className='abhishek4'>
+                    <div className='telephoneicon'>
                       <BsFillShieldLockFill size={30} />
                     </div>
-                    <label htmlFor='otp' className='abhishek5'>Enter your otp</label>
+                    <label htmlFor='otp' className='phonelabel'>Enter your otp</label>
                     <OtpInput
                       value={otp}
                       onChange={setOtp}
@@ -97,26 +113,26 @@ const Login = () => {
                       autoFocus
                       className="opt-container"
                     ></OtpInput>
-                    <button onClick={onOTPVerify} className='abhishek6'>
+                    <button onClick={onOTPVerify} className='signupbutton'>
                       {loading && (
-                        <CgSpinner size={30} className="abhishek7" />
+                        <CgSpinner size={30} className="spinner" />
                       )}
                       <span>Verify OTP</span>
                     </button>
                   </>
                 ) : (
                   <>
-                    <div className='abhishek4'>
+                    <div className='telephoneicon'>
                       <BsTelephoneFill size={30} />
                     </div>
-                    <label htmlFor='' className='abhishek5'>Verify your phone number</label>
+                    <label htmlFor='' className='phonelabel'>Verify your phone number</label>
                     <PhoneInput country={"in"} value={ph} onChange={setPh}></PhoneInput>
                     <button
                       onClick={onSignup}
-                      className='abhishek6'
+                      className='signupbutton'
                     >
                       {loading && (
-                        <CgSpinner size={30} className="abhishek7" />
+                        <CgSpinner size={30} className="spinner" />
                       )}
                       <span>Send code via SMS</span>
                     </button>
@@ -129,7 +145,7 @@ const Login = () => {
 
       </div>
     </section>
-    
+    </>
   )
 }
 

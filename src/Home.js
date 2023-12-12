@@ -6,7 +6,7 @@ import { FaPlus } from "react-icons/fa";
 import { RiUserLine } from "react-icons/ri";
 import { LuClock1 } from "react-icons/lu";
 import { useNavigate } from "react-router-dom"
-
+import './Home.css';
 
 
 
@@ -14,6 +14,10 @@ const Home = () => {
     const navigate = useNavigate();
     const handleEditbutton = () => {
         navigate('/create'); 
+    };
+
+    const handleLogout = () => {
+        navigate('/'); 
     };
        return (
         <div className="home">
@@ -25,6 +29,8 @@ const Home = () => {
                 <div >
                     <IoIosNotificationsOutline size={40} />
                     <CiServer size={40} />
+                    <button  className="logout-button" onClick={handleLogout}>Logout</button>
+
                 </div>
             </nav>
             <div className='taskcontainer'>
@@ -39,7 +45,7 @@ const Home = () => {
             </div>
             <div className='dateAndTitle'>
             <div >23 Mar</div>
-              <div className="container2">
+              <div className="container">
                     <div className="title">Meeting For Business</div>
                     <div className="number"><RiUserLine/>3</div>
                     <div className="time"><LuClock1/> 7:36 - 8:30 P.M.</div>
