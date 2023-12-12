@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import Home from "./Home";
+import Home from "./Home/Home";
 import Login from "./Login";
-import Create from "./Create"
+import Create from "./create/Create"
 
 
 function AllPath()  {

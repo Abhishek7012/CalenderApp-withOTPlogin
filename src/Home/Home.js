@@ -1,15 +1,18 @@
 import React from 'react';
-import { RiUserLine } from 'react-icons/ri';
-import { LuClock1 } from 'react-icons/lu';
-import { TbMinusVertical } from 'react-icons/tb'; // Add this import
-import { FaPlus } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import { useTaskContext } from './TaskContext'; // Import the context
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { CiFilter, CiServer } from "react-icons/ci";
+import { TbMinusVertical } from "react-icons/tb";
+import { FaPlus } from "react-icons/fa";
+import { RiUserLine } from "react-icons/ri";
+import { LuClock1 } from "react-icons/lu";
+import { useNavigate } from "react-router-dom"
 import './Home.css';
+import { useTaskContext } from '../TaskContext';
+
 
 const Home = () => {
   const navigate = useNavigate();
-  const { tasks } = useTaskContext(); // Use the context
+  const { tasks } = useTaskContext();
 
   const handleEditbutton = () => {
     navigate('/create');
@@ -18,6 +21,7 @@ const Home = () => {
   const handleLogout = () => {
     navigate('/');
   };
+
 
   return (
     <div className="home">
@@ -36,11 +40,11 @@ const Home = () => {
       </nav>
       <div className="taskcontainer">
         <div className="upcoming">
-          <TbMinusVertical size={40} />Upcoming
+          <TbMinusVertical size={40} />Upcoming Tasks
         </div>
         {tasks.map((task, index) => (
           <div className="dateAndTitle" key={index}>
-            <div>{task.date}</div>
+            <div className="task-date">{task.date}</div>
             <div className="container">
               <div className="title">{task.title}</div>
               <div className="number">
@@ -61,6 +65,7 @@ const Home = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Home;
+

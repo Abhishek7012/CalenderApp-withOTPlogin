@@ -63,7 +63,7 @@ const Login = () => {
         setUser(res.user)
         setLoading(false)
         setTimeout(() => {
-          navigate('/home'); // Redirect to home page after 2 seconds
+          navigate('/home'); 
         }, 2000);
       })
       .catch((err) => {

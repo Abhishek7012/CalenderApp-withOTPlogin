@@ -1,3 +1,46 @@
+**Calendar App with FirebaseAuth - Overview**
+
+**Technologies Used:**
+- **React**: Frontend library for building user interfaces.
+- **React Router**: For navigation within the React app.
+- **Firebase**: Backend-as-a-Service (BaaS) platform for authentication and database storage.
+- **React Bootstrap**: CSS framework for styling components.
+- **React Icons**: Library for using popular icons in React components.
+- **React-Phone-Input-2**: Library for handling phone number input.
+- **Otp-Input-React**: Library for handling OTP input.
+- **Toaster**: Simple toast notification library for providing user feedback.
+- **Bootstrap**: CSS framework for additional styling.
+
+**Authentication Flow:**
+1. The app starts with a login page where users enter their phone number.
+2. Firebase's phone authentication is implemented using the `signInWithPhoneNumber` method.
+3. A reCAPTCHA verification is added for security.
+4. Upon successful phone number submission, an OTP is sent to the user's phone.
+5. Users enter the received OTP to verify their identity.
+6. Upon successful verification, users are redirected to the home page.
+
+**Calendar App Functionality:**
+- The home page displays upcoming tasks stored in the app's context.
+- Tasks are stored in a global context to be accessible across components.
+- The create page allows users to input task details, including title, date range, number of participants, and time.
+- Upon clicking the "Create" button, the task is added to the context, and users are redirected to the home page.
+- The app uses React Router for navigation between pages.
+- Basic styling is provided using React Bootstrap and custom CSS.
+
+**Why This Approach:**
+1. **Firebase Authentication**: Firebase provides a secure and scalable authentication solution, making it easy to implement phone authentication.
+2. **React Context**: Using context allows for state management across components without prop drilling, making it easy to share task data between the create and home pages.
+3. **React Router**: Enables navigation within the app, allowing users to move between the login, create, and home pages seamlessly.
+4. **Libraries for UI Components**: Libraries like React Icons, Otp-Input-React, and React-Phone-Input-2 simplify the implementation of UI components, saving development time.
+
+**Future Enhancements:**
+- Implementing Firebase Firestore for persistent task storage.
+- Adding the ability to edit and delete tasks.
+- Improving the UI for a more polished user experience.
+
+Building the app in this way ensures a smooth user authentication process and provides a foundation for expanding the app's functionality in the future. The chosen technologies offer a good balance between ease of development, scalability, and a clean user interface.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
